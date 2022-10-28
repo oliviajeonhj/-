@@ -1,0 +1,127 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "GongGothicLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 웹표준스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  letter-spacing: -0.08em;
+}
+
+ul, li, dl, dt, dd, ol {
+  list-style: none;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.flexBC {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*레이아웃*/
+#nav {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: white;
+  background-color: transparent;
+  z-index: 10000;
+}
+#nav a {
+  display: block;
+}
+#nav h1 a img {
+  width: 150px;
+}
+#nav .depth1 {
+  display: flex;
+  margin-right: -15px;
+}
+#nav .depth1 li {
+  margin: 0 15px;
+  position: relative;
+  padding: 4px 0;
+}
+#nav .depth1 li:before {
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  height: 10%;
+  transition: 0.5s;
+}
+#nav .depth1 li.active:before {
+  content: "";
+  background-color: white;
+  width: 100%;
+}
+#nav .depth1 li.active a {
+  color: #039532;
+}
+#nav .depth1 li a {
+  position: relative;
+}
+
+.wrap h2 {
+  text-align: center;
+}
+.wrap h2:before {
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 20px;
+  background-color: #222;
+  margin: 0 auto 15px;
+}
+.wrap section {
+  padding: 80px 0;
+  min-height: 600px;
+}
+
+#preInterview h2 {
+  color: pink;
+}
+#preInterview dl dt {
+  color: blue;
+}
+#preInterview dl dt:after {
+  content: "+";
+}
+#preInterview dl dt.act:after {
+  content: "-";
+}
+#preInterview dl dt.act {
+  color: red;
+}
+#preInterview dl dt.act + dd {
+  max-height: 250px;
+  padding-top: 1rem;
+}
+#preInterview dl dd {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}

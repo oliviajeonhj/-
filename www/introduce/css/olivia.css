@@ -1,0 +1,107 @@
+
+#mainBody *{
+    margin-bottom: 0;
+}
+
+.logo-2{display: none;}
+body.scroll .logo-1{display: none;}
+body.scroll .logo-2 {display: block;}
+
+#allMenu{
+    position: relative;
+    width: 2rem;
+    border: 0;
+    background-color: transparent;
+    padding: 0;}
+
+#allMenu span{
+    display: block;
+    height: 2px;
+    background-color: black;
+    margin: 11px 0;}
+
+#allMenu:after,
+#allMenu:before{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    width: 100%;}
+
+#allMenu:after{
+    bottom: 0;}
+
+#allMenu:before {
+    top: 0;}
+
+#allMenu.open span{display: none;}
+
+#allMenu.open:after{
+    transform: rotate(-45deg);}
+
+#allMenu.open:before{
+    transform: rotate(45deg);
+    top: -2px;}
+
+#allMenu.open + .depth1{
+    display: block !important;
+    position: absolute;
+    background-color: #59c04d75;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    top: 100%;
+    text-align: center;}
+
+#allMenu.open + .depth1 a{
+    color: #039532;}
+
+/* 스크롤링 */
+
+body.scroll #nav{
+    background-color: rgba(11, 133, 11, 0.6);}
+
+/* 상단 */
+
+#top-sec{
+    background-image: url(http://live.lge.co.kr/wp-content/uploads/2015/07/%EB%B0%94%EB%8B%A4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;}
+
+.swiper {
+    width: 600px;
+    height: 300px;}
+
+.wrap h2:before{
+    display: none;}
+
+.myPic{
+    padding-top: 30px;
+    height: 250px;}
+
+
+/* 프리인터뷰 */
+
+
+#preInterview .faqAsk.act + dd{
+    max-height: 150px;}
+
+#contact{
+    height: 600px;
+    background-color: lightpink;}
+
+#portfolio, footer{
+    height: 700px;}
+
+dd{
+    line-height: 2;}
+
+h2{
+    background-color: #039532;
+    color: white;}
+
